@@ -4,7 +4,7 @@ var mongoose    = require('mongoose'),
 var userController = function(passport) {
     
     this.startLogin = function(req, res) {
-        res.render("login", { message: req.flash('loginMessage')} );
+        res.render("user/login", { message: req.flash('loginMessage')} );
     }
     
     this.login = passport.authenticate('local-login', {
@@ -13,7 +13,7 @@ var userController = function(passport) {
     });
     
     this.startSignup = function(req, res) {
-        res.render("signup", { message: req.flash('signupMessage') });
+        res.render("user/signup", { message: req.flash('signupMessage') });
     }
     
     this.signup = passport.authenticate('local-signup', {
