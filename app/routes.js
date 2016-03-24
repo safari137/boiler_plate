@@ -25,6 +25,9 @@ function routes(app, passport) {
     app.route("/signup")
         .get(userController.startSignup)
         .post(userController.signup);
+    
+    app.route("/logout")
+        .get(userController.logout);
 }
 
 module.exports = routes;
